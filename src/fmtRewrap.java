@@ -32,12 +32,17 @@ public class fmtRewrap {
 			
 			
 		} 
-		
 		build.append(line.toString());
 		
+		if(build.lastIndexOf("\n")!=build.length()-1){
+			build.append("\n");	
+		}
+		
+		//if last line character is newline do nothing
 		
 		
-		build.append("\n");
 		return build.toString();
 	}
+	
+
 }
