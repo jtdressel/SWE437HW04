@@ -92,4 +92,19 @@ public class fmtRewrapTest {
 		assertEquals(expected, fmtRewrap.fmtRewrap(inputString, width));
 	}
 
+	@Test
+	public void testNewlineInput(){
+		inputString = "This\nline\nhas\nsome line breaks of its own. Does this break things?";
+		width = 30;
+		expected = "This\nline\nhas\nsome line\nbreaks of its own. Does this\nbreak things?\n";
+		assertEquals(expected, fmtRewrap.fmtRewrap(inputString, width));
+	}
+	@Test
+	public void testFmtRewrapSingleSpaceString(){
+		inputString = " ";
+		width = 10;
+		expected = " \n";
+		assertEquals(expected, fmtRewrap.fmtRewrap(inputString, width));
+	}
+
 }
