@@ -9,6 +9,10 @@ public class fmtRewrap {
 	}
 
 	private static StringBuilder adjustWidth(String input, int width) {
+		if(input.equals("")){
+			return new StringBuilder("\n");
+		}
+		
 		StringBuilder build = new StringBuilder();
 		StringBuilder line = new StringBuilder();
 		String[] words = input.split(" ");
