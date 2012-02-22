@@ -2,11 +2,11 @@
 //James Dressel
 public class fmtRewrap {
 	static public String fmtRewrap(String input, int width){
-
+		exceptionCheck(input, width);
 		StringBuilder build = new StringBuilder();
 		StringBuilder line = new StringBuilder();
 		String[] words = input.split(" ");
-		exceptionCheck(input, width);
+
 
 		for(String word:words){
 			int projectedLength = line.length()+word.length()+1;
