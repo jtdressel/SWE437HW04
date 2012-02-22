@@ -3,11 +3,15 @@
 public class fmtRewrap {
 	static public String fmtRewrap(String input, int width){
 		exceptionCheck(input, width);
+		StringBuilder build = adjustWidth(input, width);
+		newLineFormater(build);
+		return build.toString();
+	}
+
+	private static StringBuilder adjustWidth(String input, int width) {
 		StringBuilder build = new StringBuilder();
 		StringBuilder line = new StringBuilder();
 		String[] words = input.split(" ");
-
-
 		for(String word:words){
 			int projectedLength = line.length()+word.length()+1;
 			
@@ -24,8 +28,7 @@ public class fmtRewrap {
 			}
 		} 
 		build.append(line.toString());
-		newLineFormater(build);
-		return build.toString();
+		return build;
 	}
 
 	private static void newLineFormater(StringBuilder build) {
@@ -38,7 +41,6 @@ public class fmtRewrap {
 		if (input== null){
 			throw new NullPointerException("The input string must not be null");
 		}
-		
 		if (width <1){
 			throw new IllegalArgumentException("Width must be at least 1");
 		}
