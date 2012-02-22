@@ -28,14 +28,16 @@ public class fmtRewrap {
 		} 
 		build.append(line.toString());
 		
+		newLineFormater(build);
+		
+
+		return build.toString();
+	}
+
+	private static void newLineFormater(StringBuilder build) {
 		if(build.lastIndexOf("\n")!=build.length()-1){
 			build.append("\n");	
 		}
-		
-		//if last line character is newline do nothing
-		
-		
-		return build.toString();
 	}
 	
 	private static void exceptionCheck(String input, int width){
