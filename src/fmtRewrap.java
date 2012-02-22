@@ -2,17 +2,11 @@
 //James Dressel
 public class fmtRewrap {
 	static public String fmtRewrap(String input, int width){
-		if (input== null){
-			throw new NullPointerException("The input string must not be null");
-		}
-		
-		if (width <1){
-			throw new IllegalArgumentException("Width must be at least 1");
-		}
+
 		StringBuilder build = new StringBuilder();
 		StringBuilder line = new StringBuilder();
 		String[] words = input.split(" ");
-		
+		exceptionCheck(input, width);
 
 		for(String word:words){
 			int projectedLength = line.length()+word.length()+1;
@@ -42,6 +36,16 @@ public class fmtRewrap {
 		
 		
 		return build.toString();
+	}
+	
+	private static void exceptionCheck(String input, int width){
+		if (input== null){
+			throw new NullPointerException("The input string must not be null");
+		}
+		
+		if (width <1){
+			throw new IllegalArgumentException("Width must be at least 1");
+		}
 	}
 	
 
