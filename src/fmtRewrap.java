@@ -20,17 +20,11 @@ public class fmtRewrap {
 			} else{
 				build.append(line.toString());
 				build.append("\n");
-				line = new StringBuilder(word);
-				
+				line = new StringBuilder(word);	
 			}
-			
-			
 		} 
 		build.append(line.toString());
-		
 		newLineFormater(build);
-		
-
 		return build.toString();
 	}
 
