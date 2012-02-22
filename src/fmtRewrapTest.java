@@ -83,5 +83,13 @@ public class fmtRewrapTest {
 		width = 5;
 		fmtRewrap.fmtRewrap(null, width);
 	}
+	
+	@Test
+	public void testFmtRewrapEmptyString(){
+		inputString = "";
+		width = 10;
+		expected = "\n";
+		assertEquals(expected, fmtRewrap.fmtRewrap(inputString, width));
+	}
 
 }
