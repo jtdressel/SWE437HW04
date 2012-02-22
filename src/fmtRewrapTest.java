@@ -54,6 +54,15 @@ public class fmtRewrapTest {
 		assertEquals(expected, fmtRewrap.fmtRewrap(inputString, width));
 	}
 	
+	@Test
+	public void testFmtRewrapRedone(){
+		inputString = "This sentence is longer than the width so it should take multiple lines";
+		width = 5;
+		expected = "This\nsentence\nis\nlonger\nthan\nthe\nwidth\nso\nit\nshould\ntake\nmultiple\nlines\n";
+		String repeat = fmtRewrap.fmtRewrap(inputString, width);
+		//Have only one newline at the end
+		assertEquals(expected, fmtRewrap.fmtRewrap(repeat, width));
+	}
 	
 	@Test(expected=IllegalArgumentException.class)
 	public void testFmtRewrapZeroWidth(){
