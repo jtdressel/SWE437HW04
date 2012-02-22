@@ -12,6 +12,9 @@ public class fmtRewrap {
 		if(input.equals("")){
 			return new StringBuilder("\n");
 		}
+		if(input.equals(" ")){
+			return new StringBuilder(" \n");
+		}
 		
 		StringBuilder build = new StringBuilder();
 		StringBuilder line = new StringBuilder();
