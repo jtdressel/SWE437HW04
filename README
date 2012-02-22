@@ -1,0 +1,13 @@
+SWE 437 Homework 4 
+Spring 2012
+TDD: Part 2 of fmtRewrap
+
+Finish the job with fmtRewrap. Specifically, using TDD, produce a comprehensive test set and corresponding implmentation.
+
+There are 4 deliverables for this assignment:
+
+fmtRewrap.java and fmtRewrapTest.java These must be turned in on Blackboard. The GTA must be able to run your code against your tests for credit.
+A short comparison of your final API with the original fmtRewrap interface. It is possible you will arrive at the same API.
+A short assessment of your test cases from assignment 2. What is the relationship between your final TDD tests and your assignment 2 tests?
+A short narrative of your TDD development process. That is, describe the order in which you considered your tests, how many TDD cycles you used, and what refactorings you found necessary.
+The final two deliverables may be turned in either on Blackboard or simply on paper. Only the code/tests need be on Blackboard. For all deliverables, a paper copy will provide the GTA with a mechanism to provide feedback.
